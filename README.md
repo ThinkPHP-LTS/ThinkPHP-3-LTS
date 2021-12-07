@@ -28,3 +28,7 @@
 
 3.2.5版本对应的详细提交id为： https://github.com/top-think/thinkphp/commit/45489acfa131cf47efa61e85be05bedc8c3c94cf
 
+长期支持组织
+------------
+类似的项目还有5.0.x支持计划：https://github.com/ThinkPHP-LTS/ThinkPHP-5.0.x-LTS
+
