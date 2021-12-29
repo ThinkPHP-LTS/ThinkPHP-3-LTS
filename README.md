@@ -7,7 +7,65 @@
 项目使用说明：
 ------------
 
-项目源码位于src目录下
+① Composer 包地址： https://packagist.org/packages/thinkphp-lts/thinkphp-3-lts
+
+② 到项目文件夹下使用执行composer安装命令
+
+> composer require thinkphp-lts/thinkphp-3-lts dev-main
+
+
+建立index.php文件如下
+
+```
+<?php
+
+// 应用入口文件
+
+// 检测PHP环境
+if (version_compare(PHP_VERSION, '5.6.0', '<')) {
+    die('require PHP > 5.6.0 !');
+}
+
+// 开启调试模式 建议开发阶段开启 部署阶段注释或者设为false
+define('APP_DEBUG', true);
+
+// 定义应用目录
+define('APP_PATH', './Application/');
+
+// 定义默认的模块，不生效
+// define('DEFAULT_MODULE', 'Home');
+
+// 定义模板主题
+define("DEFAULT_THEME","default");
+
+// 定义模板文件默认目录
+define("TMPL_PATH","./Template/".DEFAULT_THEME."/");
+
+// 定义静态文件路径-建议使用CDN地址
+define("STATIC_PATH","http://cdn.com/");
+
+
+// 引入ThinkPHP入口文件
+require './vendor/thinkphp-lts/thinkphp-3-lts/src/ThinkPHP/ThinkPHP.php';
+
+// 亲^_^ 后面不需要任何代码了 就是如此简单
+
+
+```
+
+然后使用 php -S localhost:80 启动开发服务器，之后访问 http://localhost
+
+正确后会返回
+
+```
+欢迎使用 ThinkPHP！
+版本 V3.2.5
+```
+
+返回目录，即看到框架自动生成了 Application文件夹（项目初始化目录）
+
+后续注意在.gitignore里忽略掉 vendor 目录
+
 
 
 官方版本介绍
