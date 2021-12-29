@@ -32,9 +32,6 @@ define('APP_DEBUG', true);
 // 定义应用目录
 define('APP_PATH', './Application/');
 
-// 定义默认的模块，不生效
-// define('DEFAULT_MODULE', 'Home');
-
 // 定义模板主题
 define("DEFAULT_THEME","default");
 
@@ -44,12 +41,10 @@ define("TMPL_PATH","./Template/".DEFAULT_THEME."/");
 // 定义静态文件路径-建议使用CDN地址
 define("STATIC_PATH","http://cdn.com/");
 
-
 // 引入ThinkPHP入口文件
 require './vendor/thinkphp-lts/thinkphp-3-lts/src/ThinkPHP/ThinkPHP.php';
 
 // 亲^_^ 后面不需要任何代码了 就是如此简单
-
 
 ```
 
