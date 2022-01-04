@@ -1,8 +1,19 @@
 # ThinkPHP-3-LTS    （ThinkPHP 3.x 长期支持版）
 
-持续维护ThinkPHP 3.x 版本的语法，使用现代的composer等类库，但保持对原有语法和用法的兼容，以便此前程序可以平滑迁移升级。
+持续维护ThinkPHP 3.x 版本的语法，使用现代的composer等类库，但保持对原有语法和用法的兼容，以便此前程序可以迁移升级。
 
 本项目采用与官方原始版本一致的 Apache 2 开源协议。
+
+路线图TODO：
+------------
+1. 目前发现PHP 7上有不兼容，准备修复PHP 7的不兼容；
+2. 发现一些TP5、TP6的比较好的特性，进行引入
+3. 关注和验证可能的漏洞情况，尝试修复。 增加一些主动防御的插件机制。
+
+社区QQ群：
+---------
+群号：619288321
+
 
 项目使用说明：
 ------------
@@ -32,9 +43,6 @@ define('APP_DEBUG', true);
 // 定义应用目录
 define('APP_PATH', './Application/');
 
-// 定义默认的模块，不生效
-// define('DEFAULT_MODULE', 'Home');
-
 // 定义模板主题
 define("DEFAULT_THEME","default");
 
@@ -44,12 +52,10 @@ define("TMPL_PATH","./Template/".DEFAULT_THEME."/");
 // 定义静态文件路径-建议使用CDN地址
 define("STATIC_PATH","http://cdn.com/");
 
-
 // 引入ThinkPHP入口文件
 require './vendor/thinkphp-lts/thinkphp-3-lts/src/ThinkPHP/ThinkPHP.php';
 
 // 亲^_^ 后面不需要任何代码了 就是如此简单
-
 
 ```
 
