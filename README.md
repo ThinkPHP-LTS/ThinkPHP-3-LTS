@@ -94,5 +94,19 @@ require './vendor/thinkphp-lts/thinkphp-3-lts/src/ThinkPHP/ThinkPHP.php';
 
 长期支持组织
 ------------
-类似的项目还有5.0.x支持计划：https://github.com/ThinkPHP-LTS/ThinkPHP-5.0.x-LTS
+类似的项目还有5.0.x支持计划：https://github.com/ThinkPHP-LTS/ThinkPHP-5.0.x-LTS 
+
+Composer化
+----------
+在官方版本的 ThinkPHP/Library/Vendor/ 目录下存在第三方类库，本LTS版本移除了文件包含形式的第三方类库，改为使用更通用的composer方式包含。
+
+清单和包含关系如下：
+
+(1) Boris 1.0.8  
+  > composer require d11wtq/boris v1.0.8
+  已验证 vendor\d11wtq\boris\lib\Boris 下文件与官方自带的文件完全一致
+
+
+
+
 
