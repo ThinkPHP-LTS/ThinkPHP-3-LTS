@@ -6,7 +6,7 @@
 
 路线图TODO：
 ------------
-1. 目前发现PHP 7上有不兼容，准备修复PHP 7的不兼容；
+1. 兼容PHP 7、PHP 8 版本。（ 已完成：参见变更结构文档：https://github.com/ThinkPHP-LTS/ThinkPHP-3-LTS/blob/main/docs/change_index.md ）
 2. 发现一些TP5、TP6的比较好的特性，进行引入
 3. 关注和验证可能的漏洞情况，尝试修复。 增加一些主动防御的插件机制。
 
@@ -33,8 +33,8 @@
 // 应用入口文件
 
 // 检测PHP环境
-if (version_compare(PHP_VERSION, '5.6.0', '<')) {
-    die('require PHP > 5.6.0 !');
+if (version_compare(PHP_VERSION, '7.0.0', '<')) {
+    die('Modern Framework Need PHP > 7.0.0 !');
 }
 
 // 开启调试模式 建议开发阶段开启 部署阶段注释或者设为false
@@ -42,12 +42,6 @@ define('APP_DEBUG', true);
 
 // 定义应用目录
 define('APP_PATH', './Application/');
-
-// 定义模板主题
-define("DEFAULT_THEME","default");
-
-// 定义模板文件默认目录
-define("TMPL_PATH","./Template/".DEFAULT_THEME."/");
 
 // 定义静态文件路径-建议使用CDN地址
 define("STATIC_PATH","http://cdn.com/");
