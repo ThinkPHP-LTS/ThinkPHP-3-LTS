@@ -100,10 +100,11 @@ Composer化
 ----------
 在官方版本的 ThinkPHP/Library/Vendor/ 目录下存在第三方类库，本LTS版本移除了文件包含形式的第三方类库，改为使用更通用的composer方式包含。
 
-清单和包含关系如下：
+清单和重新composer方式引用类库说明如下：
 
 (1) Boris 1.0.8  
   > composer require d11wtq/boris v1.0.8
+  
   已验证 vendor\d11wtq\boris\lib\Boris 下文件与官方自带的文件完全一致
 
 
